@@ -6,6 +6,6 @@ if [ "${ITCHIO_VERSION}" != "" ]; then
 fi
 
 echo
-echo "-- Uploading ${ITCHIO_PATH} to ${ITCHIO_PROJECT} as ${ITCHIO_CHANNEL}-${version_arg}"
+echo "-- Uploading ${ITCHIO_PATH} to ${ITCHIO_PROJECT}"
 echo "butler push ${ITCHIO_PATH} ${version_arg} ${ITCHIO_PROJECT}:${ITCHIO_CHANNEL}"
-/bulter/butler push ${ITCHIO_PATH} ${ITCHIO_PROJECT}:${ITCHIO_CHANNEL} ${version_arg}
+/butler/butler push ${ITCHIO_PATH} ${ITCHIO_PROJECT}:${ITCHIO_CHANNEL} ${version_arg}
