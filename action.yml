@@ -1,0 +1,32 @@
+# action.yml
+name: 'Itch.io Upload'
+description: 'Upload to an Itch.io project'
+branding:
+  icon: 'upload'
+  color: 'blue'
+inputs:
+  path:
+    description: 'path to upload'
+    required: true
+  project:
+    description: 'name of the itchio project'
+    required: true
+  channel:
+    description: 'name of the upload channel'
+    required: true
+  version:
+    description: 'version to associate with the upload'
+    required: false
+  api-key:
+    description: 'itchio api key'
+    required: true
+runs:
+  using: docker
+  image: Dockerfile
+  env:
+    BUTLER_API_KEY: ${{ inputs.api-key }}
+
+    ITCHIO_PATH: ${{ inputs.path }}
+    ITCHIO_PROJECT: ${{ inputs.project }}
+    ITCHIO_VERSION: ${{ inputs.version }}
+    ITCHIO_CHANNEL: ${{ inputs.channel }}
