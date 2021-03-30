@@ -22,7 +22,7 @@ inputs:
     required: true
 runs:
   using: docker
-  image: Dockerfile
+  image: docker://robpc/itchio-upload-action:latest
   env:
     BUTLER_API_KEY: ${{ inputs.api-key }}
 
