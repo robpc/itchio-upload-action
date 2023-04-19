@@ -1,4 +1,4 @@
-ARG VERSION="15.20.0"
+ARG VERSION="15.21.0"
 
 FROM robpc/itchio-butler:${VERSION}
 
