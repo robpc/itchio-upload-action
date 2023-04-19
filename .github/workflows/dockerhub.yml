@@ -2,7 +2,7 @@ name: Dockerhub
 
 env:
   docker_repo: robpc/itchio-upload-action
-  version: 15.20.0
+  version: 15.21.0
 
 on:
   push:
